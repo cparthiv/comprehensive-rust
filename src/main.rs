@@ -2,10 +2,10 @@ fn main() {
     let mut i = 0;
     loop {
         i += 1;
-        println!("{i}");
-        if i > 100 {
-            // Loop statement loops until a break
-            break;
-        }
+        // Exit out of loop
+        if i > 5 { break; }
+        // Start next iteration immediately
+        if i % 2 == 0 { continue; }
+        println!("{}", i)
     }
 }
