@@ -1,12 +1,11 @@
 fn main() {
-    let a = 10;
-    println!("before: {a}");
-    // Scope is limited to the enclosing block
-    {
-        let a = "hello";
-        println!("Inner scope: {a}");
-        let a = true;
-        println!("Shadowed in inner scope: {a}");
+    println!("gcd: {}", gcd(143, 52))
+}
+
+fn gcd(p0: u32, p1: u32) -> u32 {
+    if p1 > 0 {
+        gcd(p1, p0 % p1)
+    } else {
+        p0
     }
-    println!("after: {a}")
 }
