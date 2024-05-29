@@ -1,16 +1,14 @@
-fn factorial(number: u32) -> u32 {
-    let mut product = 1;
-    for i in 1..=number {
-        product *= dbg!(i);
+fn collatz_length(mut n: i32) -> u32 {
+    // If n is even, n should be divided by 2
+    // If n is odd, should be multiplied by 3 and added to 1
+    let mut len = 1;
+    while n > 1 {
+        n = if n % 2 == 0 { n / 2 } else { 3 * n + 1 };
+        len += 1;
     }
-    product
-}
-
-fn in_progress(number: u32) -> u32 {
-    todo!()
+    len
 }
 
 fn main() {
-    let n = 4;
-    println!("{n}! = {}", factorial(n))
+    println!("Length: {}", collatz_length(11))
 }
