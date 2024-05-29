@@ -1,13 +1,7 @@
 fn main() {
-    let x = 10;
-    if x == 0 {
-        println!("X is equal to zero")
-    } else if x < 100 {
-        println!("X is a reasonably sized number")
-    } else {
-        println!("X is a huge number")
+    let mut x = 200.0;
+    while x >= 10.0 {
+        x = x / 2.0
     }
-
-    let size = if x < 20 { "small" } else { "large" };
-    println!("number size: {}", size)
+    println!("Final x: {x}")
 }
