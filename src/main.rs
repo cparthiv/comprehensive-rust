@@ -8,7 +8,10 @@ fn collatz_length(mut n: i32) -> u32 {
     }
     len
 }
-
+#[test]
+fn test_collatz_length() {
+    assert_eq!(collatz_length(11), 15)
+}
 fn main() {
     println!("Length: {}", collatz_length(11))
 }
