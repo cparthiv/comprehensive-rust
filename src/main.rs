@@ -1,7 +1,8 @@
 fn main() {
-    let mut x = 200.0;
-    while x >= 10.0 {
-        x = x / 2.0
+    for x in 1..5{
+        println!("x: {x}")
     }
-    println!("Final x: {x}")
+    for elem in [1, 2, 3, 4, 5] {
+        println!("elem: {elem}")
+    }
 }
