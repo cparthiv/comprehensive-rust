@@ -1,11 +1,12 @@
 fn main() {
-    let z = 13;
-    // Block
-    // Each block has a value and a type which are those of the last expression of the block
-    let x = {
-        let y = 10;
-        println!("y: {y}");
-        z - y
-    };
-    println!("x: {x}");
+    let a = 10;
+    println!("before: {a}");
+    // Scope is limited to the enclosing block
+    {
+        let a = "hello";
+        println!("Inner scope: {a}");
+        let a = true;
+        println!("Shadowed in inner scope: {a}");
+    }
+    println!("after: {a}")
 }
