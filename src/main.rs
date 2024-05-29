@@ -1,11 +1,16 @@
-fn main() {
-    println!("gcd: {}", gcd(143, 52))
+fn factorial(number: u32) -> u32 {
+    let mut product = 1;
+    for i in 1..=number {
+        product *= dbg!(i);
+    }
+    product
 }
 
-fn gcd(p0: u32, p1: u32) -> u32 {
-    if p1 > 0 {
-        gcd(p1, p0 % p1)
-    } else {
-        p0
-    }
+fn in_progress(number: u32) -> u32 {
+    todo!()
+}
+
+fn main() {
+    let n = 4;
+    println!("{n}! = {}", factorial(n))
 }
