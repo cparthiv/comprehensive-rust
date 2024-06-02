@@ -1,4 +1,5 @@
 // Assignment: transpose rows of matrix into columns
+#![allow(unused_variables, dead_code)]
 fn main() {
     // 2d array. what is the type?
     // let array = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
