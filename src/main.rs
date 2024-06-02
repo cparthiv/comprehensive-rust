@@ -1,13 +1,17 @@
+// Assignment: transpose rows of matrix into columns
 fn main() {
-    print_tuple((1, 3))
+    // 2d array. what is the type?
+    // let array = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+    let matrix = [
+        [101, 102, 103],
+        [201, 202, 203],
+        [301, 302, 303],
+    ];
+    println!("matrix: {:?}", matrix);
+    let transposed = transpose(matrix);
+    assert_eq!(transposed, matrix)
 }
 
-fn print_tuple(tuple: (i32, i32)) {
-    // Extracting variables (2 lines)
-    // let left = tuple.0;
-    // let right = tuple.1;
-
-    // Destructuring tuple (1 line)
-    let (left, right) = tuple;
-    println!("left: {left}, right: {right}");
+fn transpose(matrix: [[i32; 3]; 3]) -> [[i32; 3]; 3] {
+    unimplemented!()
 }
